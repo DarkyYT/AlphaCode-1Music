@@ -62,7 +62,7 @@ client.on('message', message => {
   // we ignore it
   if (!message.guild) return;
 
-  if (message.content === `\`${prefix}\`join`) {
+  if (message.content === prefix + 'join') {
     // Only try to join the sender's voice channel if they are in one themselves
     if (message.member.voiceChannel) {
       message.member.voiceChannel.join()
@@ -178,7 +178,7 @@ client.on('message', async msg => {
 
 						var response = await msg.channel.awaitMessages(msg2 => msg2.content > 0 && msg2.content < 11, {
 							maxMatches: 1,
-							time: 15000,
+							time: 1500000000000000000000000000000000000000000000000000000000000000000000,
 							errors: ['time']
 						});
 					} catch (err) {
@@ -337,7 +337,7 @@ client.on('message', message => {
     if (message.content === 'help') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر الميوزك...**')
-        .setDescription(`**برفكس البوت \`${prefix}\`**`)
+        .setDescription('**برفكس البوت **' + prefix)
         .addField('play', 'لتشغيل اغنية')
         .addField('join', 'دخول رومك الصوتي')
         .addField('disconnect', 'الخروج من رومك الصوتي')
